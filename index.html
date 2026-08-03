@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional lightbox signs and custom business signs for Australian businesses. Explore high-quality illuminated signage solutions across Melbourne and Australia.">
+  <title>Lightbox Signs | Custom Illuminated Business Signage Australia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #0f172a;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --text: #334155;
+      --muted: #64748b;
+      --border: #e2e8f0;
+      --radius: 12px;
+      --shadow: 0 4px 20px rgba(15, 23, 42, 0.06);
+      --shadow-lg: 0 12px 40px rgba(15, 23, 42, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 1.05rem;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--accent-hover);
+    }
+
+    /* Header */
+    header {
+      background: var(--card);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 1.1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.45rem;
+      color: var(--primary);
+      letter-spacing: -0.02em;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.75rem;
+    }
+
+    nav a {
+      color: var(--text);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(160deg, #0f172a 0%, #1e293b 100%);
+      color: #f1f5f9;
+      padding: 4.5rem 1.5rem 5rem;
+      text-align: center;
+    }
+
+    .hero-content {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.1rem, 5vw, 3.1rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: #cbd5e1;
+      max-width: 560px;
+      margin: 0 auto 2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+      padding: 0.85rem 1.9rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: background 0.2s ease, transform 0.15s ease;
+    }
+
+    .btn:hover {
+      background: var(--accent-hover);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    /* Main layout */
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3.5rem 1.5rem 4rem;
+    }
+
+    section {
+      margin-bottom: 3.75rem;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.85rem;
+      color: var(--primary);
+      margin-bottom: 1.1rem;
+      letter-spacing: -0.02em;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      color: var(--primary);
+      margin: 1.75rem 0 0.6rem;
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 1.15rem;
+      color: var(--text);
+    }
+
+    .lead {
+      font-size: 1.12rem;
+      color: var(--muted);
+    }
+
+    /* Image block */
+    .visual {
+      margin: 2.5rem 0 3rem;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      background: #e2e8f0;
+    }
+
+    .visual img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      aspect-ratio: 16 / 9;
+    }
+
+    .visual figcaption {
+      padding: 0.85rem 1.25rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      background: var(--card);
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+
+    /* Cards / features */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.75rem;
+    }
+
+    .feature-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.6rem 1.5rem;
+      box-shadow: var(--shadow);
+      transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .feature-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-3px);
+    }
+
+    .feature-card h3 {
+      margin-top: 0;
+      font-size: 1.15rem;
+    }
+
+    .feature-card p {
+      margin-bottom: 0;
+      font-size: 0.98rem;
+      color: var(--muted);
+    }
+
+    /* Highlight box */
+    .highlight {
+      background: linear-gradient(135deg, #eff6ff 0%, #f0f9ff 100%);
+      border-left: 4px solid var(--accent);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 1.5rem 1.75rem;
+      margin: 2rem 0;
+    }
+
+    .highlight p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* CTA section */
+    .cta {
+      background: var(--primary);
+      color: #e2e8f0;
+      border-radius: var(--radius);
+      padding: 2.75rem 2rem;
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    .cta h2 {
+      color: #f8fafc;
+      margin-bottom: 0.85rem;
+    }
+
+    .cta p {
+      color: #94a3b8;
+      max-width: 520px;
+      margin: 0 auto 1.75rem;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--primary);
+      color: #94a3b8;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    footer .footer-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    footer a {
+      color: #cbd5e1;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    /* Responsive */
+    @media (max-width: 700px) {
+      nav ul {
+        display: none;
+      }
+
+      .hero {
+        padding: 3.5rem 1.25rem 4rem;
+      }
+
+      main {
+        padding: 2.5rem 1.25rem 3rem;
+      }
+
+      h2 {
+        font-size: 1.55rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <div class="logo">Sign<span>Craft</span> AU</div>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#benefits">Benefits</a></li>
+          <li><a href="#custom">Custom Options</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Lightbox Signs That Make Your Brand Shine</h1>
+      <p>High-visibility illuminated signage designed for Australian businesses that want to stand out day and night.</p>
+      <a href="#contact" class="btn">Request a Free Quote</a>
+    </div>
+  </section>
+
+  <main>
+    <section id="about">
+      <h2>What Are Lightbox Signs?</h2>
+      <p class="lead">Lightbox signs, also known as light box signs or illuminated cabinet signs, use internal LED lighting to create a bright, evenly lit display that remains highly visible after dark.</p>
+      
+      <figure class="visual">
+        <img src="https://neonsnest.com/cdn/shop/files/LightBox_Signs.png?v=1751104122&width=1100" alt="Modern illuminated lightbox signs on a commercial storefront at dusk" width="1200" height="900">
+        <figcaption>Professional lightbox signs deliver clear brand visibility around the clock.</figcaption>
+      </figure>
+
+      <p>These signs feature a durable aluminium or composite frame, a translucent acrylic face, and energy-efficient LED modules. The result is crisp colour, strong contrast, and a polished modern appearance that works for retail storefronts, restaurants, clinics, and corporate premises.</p>
+      
+      <p>Across the country, demand for quality <a href="https://neonsnest.com.au/lightbox-signs/">lightbox signage Australia</a> continues to grow as businesses seek reliable, long-lasting solutions that perform in both bright sunlight and evening conditions.</p>
+    </section>
+
+    <section id="benefits">
+      <h2>Why Choose Lightbox Signage for Your Business</h2>
+      <p>A well-designed lightbox sign does more than display your name. It creates presence, builds trust, and helps customers find you easily.</p>
+
+      <div class="features">
+        <div class="feature-card">
+          <h3>24/7 Visibility</h3>
+          <p>Internal LED lighting ensures your branding remains bright and readable long after sunset.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Energy Efficient</h3>
+          <p>Modern LEDs use minimal power while delivering consistent brightness for years of reliable service.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Weather Ready</h3>
+          <p>Outdoor-rated materials withstand Australian conditions, from coastal humidity to intense UV exposure.</p>
+        </div>
+      </div>
+
+      <h3>Perfect for Retail and Hospitality</h3>
+      <p>Whether you operate a café, boutique, medical centre or office, illuminated signage creates a professional first impression. Many owners start with a lightbox sign mockup to visualise how the finished product will look on their façade before production begins.</p>
+    </section>
+
+    <section id="custom">
+      <h2>Custom Lightbox Sign Solutions</h2>
+      <p>Every business has unique branding requirements. A lightbox sign custom approach allows you to specify exact dimensions, colours, logo placement, and mounting style so the finished sign matches your identity perfectly.</p>
+
+      <div class="highlight">
+        <p>From single-sided wall-mounted units to double-sided projecting signs, the design process begins with clear communication of your goals. Our team prepares detailed artwork and a lightbox sign mockup so you can review the concept before manufacturing starts.</p>
+      </div>
+
+      <p>Choosing <a href="https://neonsnest.com.au/sign-types/">custom business signs</a> gives you full control over materials, finish, and lighting intensity. This ensures the final product not only looks premium but also meets local regulations for size, height, and electrical safety.</p>
+    </section>
+
+    <section>
+      <h2>Lightbox Signage Melbourne and Nationwide</h2>
+      <p>Melbourne’s competitive retail environment makes strong visual branding essential. Businesses seeking lightbox signage Melbourne benefit from local expertise that understands planning rules, heritage considerations, and the city’s distinctive streetscape styles.</p>
+
+      <p>We also support clients across other states. Whether you need a light box sign Australia-wide delivery and installation or a single statement piece for a regional location, the same quality standards apply.</p>
+
+      <h3>From Concept to Installation</h3>
+      <p>The process typically includes site assessment, design development, production of a lightbox sign mockup, manufacturing, and professional installation by licensed electricians. This end-to-end service minimises disruption and guarantees a clean, code-compliant result.</p>
+    </section>
+
+    <section>
+      <h2>Investing in Quality <u><a href="https://neonsnest.com.au/">Business Signs in Australia</a></u></h2>
+      <p>High-quality illuminated signage is a long-term asset. Durable materials, efficient LEDs, and precise fabrication mean your investment continues to attract customers for many years with only minimal maintenance.</p>
+
+      <p>When you select professional business signs in Australia, you gain access to experienced designers, reliable warranties, and installation teams familiar with national and state requirements. The difference shows in both appearance and performance.</p>
+    </section>
+
+    <section class="cta" id="contact">
+      <h2>Ready to Elevate Your Storefront?</h2>
+      <p>Speak with our team about a tailored lightbox solution that fits your brand, location, and budget. We provide clear quotes and realistic timelines.</p>
+      <a href="mailto:hello@signcraftau.example" class="btn">Get Your Free Quote</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <p>&copy; 2026 SignCraft AU. All rights reserved. | Professional illuminated signage solutions for Australian businesses.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
